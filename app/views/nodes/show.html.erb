@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for (@node) do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name, :readonly => true %>
+
+			<%= f.label :ip_address %>
+			<%= f.text_field :ip_address, :readonly => true %>
+
+			<%= f.label :mac_address %>
+			<%= f.text_field :mac_address, :readonly => true %>
+
+			<%= f.label :authorization %>
+			<%= f.text_field :authorization, :readonly => true %>
+		<% end %>
+	</div>
+</div>

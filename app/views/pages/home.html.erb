@@ -1,0 +1,12 @@
+<div class="center hero-unit">
+	<h1>Ninja Detector</h1>
+	<h2>Rooting out the rogue devices on the network</h2>
+	<div class="row">
+		<div class="span5">
+			<h3>Total Devices:</h3><h2><%= Node.count %></h2>
+		</div>
+		<div class="span5">
+			<h3>Rogue Devices:</h3><h2><%= Node.where(:authorization => 'Rogue').count %></h2>
+		</div>
+	</div>
+</div>

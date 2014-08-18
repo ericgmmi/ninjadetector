@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for (@device) do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.label :ip_address %>
+			<%= f.text_field :ip_address %>
+
+			<%= f.label :device_type %>
+			<%= f.select :device_type, [['Router','Router'], ['Switch','Switch'], ['SOHO', 'SOHO']] %>
+
+			<%= f.label :community %>
+			<%= f.text_field :community %>
+
+			<%= f.submit class: "btn btn-inverse" %>
+		<% end %>
+	</div>
+</div>

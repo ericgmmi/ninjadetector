@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for (@node) do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name, :readonly => true %>
+
+			<%= f.label :ip_address %>
+			<%= f.text_field :ip_address, :readonly => true %>
+
+			<%= f.label :mac_address %>
+			<%= f.text_field :mac_address, :readonly => true %>
+
+			<%= f.label :authorization %>
+			<%= f.select :authorization, [['Rogue','Rogue'], ['Admin','Admin']] %>
+			<div class="row">
+				<div class="span2"><%= f.submit class: "btn btn-inverse" %></div>
+				<div class="span2"><%= button_to 'Cancel', :back, class: "btn btn-inverse" %></div>
+			</div>
+		<% end %>
+	</div>
+</div>
